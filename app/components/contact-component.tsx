@@ -15,8 +15,8 @@ export default function ContactComponent() {
     <div className={styles.componentpage}>
       <Center>
         <Stack className={styles.contactStack} justify="center" align="center">
-          <Anchor className={styles.email} href="mailto:lena.vogentanz@test.de" target="_blank">
-            lena.vogentanz@test.de
+          <Anchor className={styles.email} href="mailto:hello@lenavogentanz.de" target="_blank">
+            hello@lenavogentanz.de
           </Anchor>
           <Image
             component={NextImage}
