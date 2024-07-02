@@ -1,0 +1,51 @@
+.textblue {
+    color: #093eff!important;
+}
+
+.info {
+    width: 100%;
+    height: 80vh;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.imagebig {
+    height: 76vh;
+}
+
+.infolist {
+    padding-right: 15%;
+}
+
+.dividerinfo {
+    margin: 0!important;
+}
+
+.pictureshow {
+    width: 500px;
+    height: 400px;
+    height: auto;
+    background-color: transparent!important;
+    margin-bottom: 100px;
+}
+
+.headlineinfo {
+    color: #093eff!important;
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+.projname {
+    color: #093eff!important;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.projectpage {
+    margin-bottom: 35px;
+    margin-top: 50px;
+}
+
+.grouppictures {
+    margin-bottom: 15px;
+}
