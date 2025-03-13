@@ -33,14 +33,13 @@ const [testVariable, setTestVar] = useState("About me_1");
           video="https://vimeo.com/973218475?share=copy"
           width={640}
           height={360}
-          autoplay
           className={styles.vimeoVideo}
         />
       </Center>
           <Center>
 
       <Stack className={styles.info} justify="flex-start" gap="xs">
-      <Text className={styles.projname}><strong>INTERFACE</strong></Text>
+      <Text className={styles.projname}><strong>HIDDEN HEAROES</strong></Text>
       <Group justify="space-between" className={styles.info} grow gap="xs">
         <div className={styles.infolist}>
           <Stack gap="xs">

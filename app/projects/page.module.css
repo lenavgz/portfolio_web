@@ -5,12 +5,20 @@
 .info {
     width: 100%;
     height: 80vh;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 5rem;
 }
 
 .imagebig {
+    margin-top: 2rem;
     height: 76vh;
+}
+
+.imagebigbachelor {
+    margin-top: 1.5rem;
+    width: 70vw;
+    height: auto;
+    object-fit: contain;
 }
 
 .infolist {
@@ -39,6 +47,13 @@
     color: #093eff!important;
     font-size: 4rem;
     font-weight: 900;
+}
+
+.projnamesub {
+    color: #093eff!important;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
 }
 
 .projectpage {

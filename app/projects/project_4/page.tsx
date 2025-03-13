@@ -30,7 +30,6 @@ const Dashboard: FunctionComponent<PageProps> = () => {
           video="https://vimeo.com/907787984"
           width={640}
           height={360}
-          autoplay
           className={styles.vimeoVideo}
         />
       </Center>
