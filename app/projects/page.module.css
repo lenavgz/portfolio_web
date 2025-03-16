@@ -64,3 +64,27 @@
 .grouppictures {
     margin-bottom: 15px;
 }
+
+.vimeoVideo {
+    width: 100%;
+    max-width: 640px;
+    /* Keeps a reasonable max size */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .grouppictures {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pictureshow {
+        width: 100%;
+        /* Makes images fill the width */
+        max-width: 400px;
+        /* Avoids images being too large */
+    }
+    .info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

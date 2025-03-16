@@ -14,7 +14,7 @@ export default function NavComponent() {
     <Group className={styles.navigation}>
       <Button  onClick={() => router.push('/')}>HOME</Button>
 
-      <Button onClick={() => router.push('/dashboard')}>DASHBOARD</Button>
+      <Button onClick={() => router.push('/dashboard')}>PROJECTS</Button>
                 
       <Button onClick={() => router.push('/contact')}>CONTACT</Button>
     </Group>

@@ -19,13 +19,6 @@ export default function Home() {
   return (
     <div>
       <StartComponent ></StartComponent>
-
-      <div id='dashboard'> 
-        <DashboardComponent></DashboardComponent>
-      </div>
-      <div>
-        <ContactComponent></ContactComponent>
-      </div>
     </div>
 
   )

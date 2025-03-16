@@ -7,7 +7,7 @@ import LogoComponent from './logo-component copy';
 
 export default function StartComponent() {
   return (
-    <div>
+    <div className={styles.home}>
       <Center className={styles.hearo}>
 
         <Stack>
