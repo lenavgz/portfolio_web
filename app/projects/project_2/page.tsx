@@ -29,11 +29,12 @@ const [testVariable, setTestVar] = useState("About me_1");
     </Center>
 
     <Center>
-        <Vimeo
-          video="https://vimeo.com/973218475?share=copy"
-          width={640}
-          height={360}
-          className={styles.vimeoVideo}
+    <Image
+          component={NextImage}
+          alt="project image"
+          radius="md"
+          className={styles.imagebigbachelor}
+          src={project_12}
         />
       </Center>
           <Center>
@@ -67,6 +68,14 @@ const [testVariable, setTestVar] = useState("About me_1");
           </Text>
         </div>
       </Group>
+      <Center>
+        <Vimeo
+          video="https://vimeo.com/973218475?share=copy"
+          width={640}
+          height={360}
+          className={styles.vimeoVideo}
+        />
+      </Center>
       <Group grow className={styles.grouppictures}>
       <Image
           component={NextImage}
@@ -81,13 +90,6 @@ const [testVariable, setTestVar] = useState("About me_1");
           radius="md"
           className={styles.pictureshow}
           src={project_11}
-        />
-        <Image
-          component={NextImage}
-          alt="project image"
-          radius="md"
-          className={styles.pictureshow}
-          src={project_12}
         />
       </Group>
         

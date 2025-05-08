@@ -32,10 +32,10 @@ export default function DashboardComponent() {
   
 // Define project data with custom names
 const projects = [
-  { id: 1, name: "FALSCHE WAHRHEITEN", href: "./../projects/project_5", img: bild_1 },
-  { id: 2, name: "LONIS WELTRAUMREISE", href: "./../projects/project_4", img: bild_2 },
+  { id: 1, name: "FALSCHE WAHRHEITEN", href: "./../projects/project_5", img: bild_2 },
+  { id: 2, name: "LONIS WELTRAUMREISE", href: "./../projects/project_4", img: bild_4 },
   { id: 3, name: "HIDDEN HEROES", href: "./../projects/project_2", img: bild_3 },
-  { id: 4, name: "SPACE 3D", href: "./../projects/project_1", img: bild_4 },
+  { id: 4, name: "SPACE 3D", href: "./../projects/project_1", img: bild_1 },
   { id: 5, name: "KINO TEASER", href: "./../projects/project_3", img: bild_5 },
 ];
 
@@ -43,7 +43,7 @@ const projects = [
   const handleMouseMove = (e: React.MouseEvent) => {
     setMousePos({
       x: e.clientX + 10, // Slight offset
-      y: e.clientY + 10,
+      y: e.clientY - 100,
     });
   };
 

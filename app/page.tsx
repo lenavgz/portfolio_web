@@ -17,7 +17,7 @@ interface PageProps {}
 export default function Home() {
   
   return (
-    <div>
+    <div className={styles.home}>
       <StartComponent ></StartComponent>
     </div>
 

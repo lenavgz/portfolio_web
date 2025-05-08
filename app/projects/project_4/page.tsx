@@ -13,6 +13,7 @@ import Vimeo from '@u-wave/react-vimeo';
 import project_1 from './../../../assets/tigerherz_1.png';
 import project_11 from './../../../assets/tigerherz_33.png';
 import project_12 from './../../../assets/tigerherz_3.png';
+import loni_1 from './../../../assets/Loni_mockup1.png'
 
 interface PageProps {}
 
@@ -26,12 +27,13 @@ const Dashboard: FunctionComponent<PageProps> = () => {
       </Center>
 
       <Center>
-        <Vimeo
-          video="https://vimeo.com/907787984"
-          width={640}
-          height={360}
-          className={styles.vimeoVideo}
-        />
+      <Image
+            component={NextImage}
+            alt="project image"
+            radius="md"
+            className={styles.imagebigbachelor}
+            src={loni_1}
+          />
       </Center>
 
       <Stack className={styles.info} justify="flex-start" gap="xs">
@@ -63,6 +65,14 @@ const Dashboard: FunctionComponent<PageProps> = () => {
             </Text>
           </div>
         </Group>
+        <Center>
+        <Vimeo
+          video="https://vimeo.com/907787984"
+          width={640}
+          height={360}
+          className={styles.vimeoVideo}
+        />
+      </Center>
         <Group grow className={styles.grouppictures}>
           <Image
             component={NextImage}

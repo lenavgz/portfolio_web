@@ -8,7 +8,6 @@ import { usePathname, useRouter } from 'next/navigation';
 import contactbubble from './../../assets/contact.png'
 import NextImage from "next/image"
 
-
 export default function ContactComponent() {
   const router = useRouter();
   return (
