@@ -12,10 +12,16 @@ import bild_2 from "./../../assets/2.png";
 import bild_3 from "./../../assets/3.png";
 import bild_4 from "./../../assets/4.png";
 import bild_5 from "./../../assets/5.png";
+import bild_6 from "./../../assets/preview_auge.png";
+import bild_7 from "../../public/assets/skizzenbuch/1.png";
+
+
 
 export default function DashboardComponent() {
   // Store preview image state
-  const [previewImage, setPreviewImage] = useState<StaticImageData | null>(null);
+  const [previewImage, setPreviewImage] = useState<StaticImageData | null>(
+    null,
+  );
 
   // Store mouse position
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -29,15 +35,46 @@ export default function DashboardComponent() {
     5: bild_5,
   };
 
-  
-// Define project data with custom names
-const projects = [
-  { id: 1, name: "FALSCHE WAHRHEITEN", href: "./../projects/project_5", img: bild_2 },
-  { id: 2, name: "LONIS WELTRAUMREISE", href: "./../projects/project_4", img: bild_4 },
-  { id: 3, name: "HIDDEN HEROES", href: "./../projects/project_2", img: bild_3 },
-  { id: 4, name: "SPACE 3D", href: "./../projects/project_1", img: bild_1 },
-  { id: 5, name: "KINO TEASER", href: "./../projects/project_3", img: bild_5 },
-];
+  // Define project data with custom names
+  const projects = [
+    {
+      id: 1,
+      name: "FALSCHE WAHRHEITEN",
+      href: "./../projects/project_5",
+      img: bild_2,
+    },
+    {
+      id: 2,
+      name: "LONIS WELTRAUMREISE",
+      href: "./../projects/project_4",
+      img: bild_4,
+    },
+    {
+      id: 3,
+      name: "DAS AUGE ISST MIT",
+      href: "./../projects/project_6",
+      img: bild_6,
+    },
+    {
+      id: 4,
+      name: "HIDDEN HEROES",
+      href: "./../projects/project_2",
+      img: bild_3,
+    },
+    { id: 5, name: "SPACE 3D", href: "./../projects/project_1", img: bild_1 },
+    {
+      id: 6,
+      name: "KINO TEASER",
+      href: "./../projects/project_3",
+      img: bild_5,
+    },
+    {
+      id: 7,
+      name: "SKIZZENBUCH",
+      href: "./../projects/project_7",
+      img: bild_7,
+    },
+  ];
 
   // Handle mouse move inside projects div
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -50,7 +87,7 @@ const projects = [
   return (
     <div>
       <h1 className={styles.textblue}>Projects</h1>
-  
+
       {/* Image Preview Box (Follows Mouse) */}
       {previewImage && (
         <div
@@ -63,10 +100,15 @@ const projects = [
             pointerEvents: "none", // Prevents interfering with other elements
           }}
         >
-          <Image src={previewImage} alt="Preview" layout="fill" objectFit="cover" />
+          <Image
+            src={previewImage}
+            alt="Preview"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       )}
-  
+
       {/* Project Links */}
       <div
         className={styles.container}
@@ -87,10 +129,12 @@ const projects = [
               />
             </div>
             {/* Add a divider after every project except the last one */}
-            {index < projects.length - 1 && <Divider className={styles.divider} my="sm" />}
+            {index < projects.length - 1 && (
+              <Divider className={styles.divider} my="sm" />
+            )}
           </React.Fragment>
         ))}
       </div>
     </div>
   );
-}  
+}

@@ -1,5 +1,5 @@
 .textblue {
-    color: #093eff!important;
+    color: #093eff !important;
 }
 
 .info {
@@ -7,6 +7,7 @@
     height: 80vh;
     margin-top: 2rem;
     margin-bottom: 5rem;
+    justify-content: "flex-start";
 }
 
 .imagebig {
@@ -23,35 +24,41 @@
 }
 
 .infolist {
-    padding-right: 15%;
+    width: 40%;
 }
 
 .dividerinfo {
-    margin: 0!important;
+    margin: 0 !important;
 }
 
 .pictureshow {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
-    background-color: transparent!important;
-    margin-bottom: 100px;
+    background-color: transparent !important;
+    margin-bottom: 50px;
+    display: block;
+}
+
+.picturesextra {
+    gap: 3rem;
+    padding-bottom: 8rem;
 }
 
 .headlineinfo {
-    color: #093eff!important;
+    color: #093eff !important;
     font-weight: 900;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .projname {
-    color: #093eff!important;
+    color: #093eff !important;
     font-size: 4rem;
     font-weight: 900;
 }
 
 .projnamesub {
-    color: #093eff!important;
+    color: #093eff !important;
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 2rem;
@@ -60,17 +67,48 @@
 .projectpage {
     margin-bottom: 35px;
     margin-top: 50px;
+    padding: 0 4%;
 }
 
 .grouppictures {
     margin-bottom: 15px;
 }
 
+.vimeoWrapper {
+    width: 70vw;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+}
+
 .vimeoVideo {
+    aspect-ratio: 16 / 9;
     width: 100%;
-    max-width: 640px;
-    padding-bottom: 2rem;
     height: auto;
+    padding-bottom: 2rem;
+}
+
+.what {
+    width: 100%;
+    height: 80vh;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    align-items: start;
+}
+
+.whatheadline {
+    color: #093eff !important;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.whattext {
+    color: #093eff !important;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -79,13 +117,14 @@
         align-items: center;
     }
     .pictureshow {
-        width: 100%;
-        /* Makes images fill the width */
-        max-width: 400px;
-        /* Avoids images being too large */
+        max-width: 90vw;
+        margin-bottom: 2rem;
     }
     .info {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .what {
+        flex-direction: column;
     }
 }

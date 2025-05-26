@@ -1,164 +1,170 @@
 .app {
-    cursor: crosshair;
+  cursor: crosshair;
 }
 
 .bubble {
-    height: auto;
-    width: 20%;
+  height: auto;
+  width: 20%;
 }
 
 .canvasContainer {
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: visible;
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: visible;
 }
 
 .containerText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    width: 90%;
-    max-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 90%;
+  max-width: 800px;
 }
 
 .contactStack {
-    height: 70vh
+  height: 70vh;
 }
 
 .componentpage {
-    padding-top: 10vh;
+  padding-top: 10vh;
 }
 
 .divider {
-    border-color: #97aeff !important;
+  border-color: #97aeff !important;
 }
 
 .email {
-    color: #093eff!important;
-    font-size: 8vw;
-    font-weight: 900;
+  color: #093eff !important;
+  font-size: 7vw;
+  font-weight: 900;
 }
 
 .gif {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    objectFit: 'cover';
-    position: 'absolute';
-    top: 0;
-    left: 0;
-    zIndex: 0;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  objectfit: "cover";
+  position: "absolute";
+  top: 0;
+  left: 0;
+  zindex: 0;
 }
 
 .hearo {
-    height: 90vh;
+  height: 90vh;
 }
 
 .home {
-    height: 80vh;
+  height: 80vh;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .link {
-    width: "100%";
-    background-color: transparent !important;
+  width: "100%";
+  background-color: transparent !important;
 }
 
 .link:hover {
-    background-color: transparent !important;
-    background: transparent !important;
+  background-color: transparent !important;
+  background: transparent !important;
 }
 
 .navigation {
-    position: fixed;
-    top: auto;
-    bottom: 5%;
+  position: fixed;
+  top: auto;
+  bottom: 5%;
+  z-index: 1000;
 }
 
 .navbar {
-    position: fixed;
-    top: auto;
-    bottom: 5%;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    background-color: rgba(20, 20, 20, .5);
-    border: 1px #000;
-    border-radius: 100px;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+  position: fixed;
+  top: auto;
+  bottom: 5%;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(20, 20, 20, 0.5);
+  border: 1px #000;
+  border-radius: 100px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .navcontainer {
-    display: block;
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navigation {
-    position: fixed;
-    top: auto;
-    bottom: 5%;
+  position: fixed;
+  top: auto;
+  bottom: 5%;
 }
 
 .sticker {
-    position: absolute;
-    width: 150px;
-    z-index: 1;
-    cursor: grab;
+  position: absolute;
+  width: 150px;
+  z-index: 1;
+  cursor: grab;
 }
 
 .preview {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    pointer-events: none;
-    transform-origin: center;
-    transform: scale(0);
-    transition: transform 0.3s ease-in-out;
-    z-index: 2;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  pointer-events: none;
+  transform-origin: center;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
 }
 
 .previewimg {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
 }
 
 .project {
-    border-bottom: 1px solid, rgba(0, 0, 255, 0.25);
-    background-color: transparent !important;
-    /* Ensures no background change */
+  border-bottom:
+    1px solid,
+    rgba(0, 0, 255, 0.25);
+  background-color: transparent !important;
+  /* Ensures no background change */
 }
 
 .project:hover {
-    background-color: transparent !important;
-    /* Prevents background change on hover */
+  background-color: transparent !important;
+  /* Prevents background change on hover */
 }
 
 .projectpage {
-    margin-bottom: 15px;
-    margin-top: 80px;
+  margin-bottom: 35px;
+  margin-top: 50px;
+  padding: 0 4%;
 }
 
 .textblue {
-    color: #093eff!important;
-    font-weight: 900;
-    background-color: transparent !important;
+  color: #093eff !important;
+  font-weight: 900;
+  background-color: transparent !important;
 }
 
 .textblue:hover {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .textstart {
-    color: #093eff!important;
-    font-size: 3vw;
-    font-weight: 900;
+  color: #093eff !important;
+  font-size: 3vw;
+  font-weight: 900;
 }

@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import React from 'react'
-import styles from './../page.module.css'
-import Link from 'next/link'
-import { Anchor, Button, Center, Group, Stack, Image } from '@mantine/core';
-import { usePathname, useRouter } from 'next/navigation';
-import contactbubble from './../../assets/contact.png'
-import NextImage from "next/image"
+import React from "react";
+import styles from "./../page.module.css";
+import Link from "next/link";
+import { Anchor, Button, Center, Group, Stack, Image } from "@mantine/core";
+import { usePathname, useRouter } from "next/navigation";
+import contactbubble from "./../../assets/contact.png";
+import NextImage from "next/image";
 
 export default function ContactComponent() {
   const router = useRouter();
@@ -14,7 +14,11 @@ export default function ContactComponent() {
     <div className={styles.componentpage}>
       <Center>
         <Stack className={styles.contactStack} justify="center" align="center">
-          <Anchor className={styles.email} href="mailto:hello@lenavogentanz.de" target="_blank">
+          <Anchor
+            className={styles.email}
+            href="mailto:hello@lenavogentanz.de"
+            target="_blank"
+          >
             hello@lenavogentanz.de
           </Anchor>
           <Image
@@ -24,8 +28,8 @@ export default function ContactComponent() {
             className={styles.bubble}
             src={contactbubble}
           />
-        </Stack>      
+        </Stack>
       </Center>
     </div>
-  )
+  );
 }
