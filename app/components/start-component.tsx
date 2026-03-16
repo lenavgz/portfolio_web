@@ -14,7 +14,7 @@ export default function StartComponent() {
         <div ref={containerRef} className={styles.canvasContainer}>
           <div className={styles.containerText}>
             <Text className={styles.textstart}>
-              Hey, <br /> I am passionate about exploring ideas through
+              Hi,<br /> I am Lena, I am passionate about exploring ideas through
               sketching, prototypes, and human-centered design.
             </Text>
           </div>

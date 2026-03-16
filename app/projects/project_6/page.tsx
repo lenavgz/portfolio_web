@@ -8,7 +8,7 @@ import ProjectComponent from "../project-component";
 import NavComponent from "@/app/components/nav-component";
 import { Button, Flex, Group, Image, Text } from "@mantine/core";
 import bachelor_1 from "./../../../assets/Feed_frame.png";
-import bachelor_2 from "./../../../assets/Frame 2.png";
+import bachelor_2 from "./../../../assets/lena.png";
 import bachelor_3 from "./../../../assets/REcipes.png";
 import bachelor_5 from "./../../../assets/Frame 4.png";
 import bachelor_4 from "./../../../assets/Blue and Green Minimalist Modern Clothing Brand Board.png";
@@ -129,14 +129,7 @@ const Dashboard: FunctionComponent<PageProps> = () => {
               alt="project image"
               radius="md"
               style={{ maxHeight: "40vh", width: "auto" }}
-              src={bachelor_6}
-            />
-            <Image
-              component={NextImage}
-              alt="project image"
-              radius="md"
-              style={{ maxHeight: "40vh", width: "auto" }}
-              src={bachelor_1}
+              src={bachelor_2}
             />
             <Image
               component={NextImage}
@@ -144,6 +137,13 @@ const Dashboard: FunctionComponent<PageProps> = () => {
               radius="md"
               style={{ maxHeight: "40vh", width: "auto" }}
               src={bachelor_5}
+            />
+                        <Image
+              component={NextImage}
+              alt="project image"
+              radius="md"
+              style={{ maxHeight: "40vh", width: "auto" }}
+              src={bachelor_6}
             />
           </Center>
         </Stack>
