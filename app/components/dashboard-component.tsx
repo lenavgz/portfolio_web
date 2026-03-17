@@ -40,7 +40,7 @@ export default function DashboardComponent() {
     {
       id: 1,
       name: "FALSCHE WAHRHEITEN",
-      type: "UX/UI Design, 3D",
+      type: "UX/UI Design",
       href: "./../projects/project_5",
       img: bild_2,
     },
@@ -121,28 +121,28 @@ export default function DashboardComponent() {
         onMouseMove={handleMouseMove} // Track mouse movement
         onMouseLeave={() => setPreviewImage(null)} // Hide on mouse leave
       >
-{projects.map(({ id, name, type, href, img }, index) => (
-  <React.Fragment key={id}>
-    {/* 1. Add divider BEFORE the project, but NOT for the first one */}
-    {index !== 0 && (
-      <Divider className={styles.divider} my="sm" />
-    )}
+      {projects.map(({ id, name, type, href, img }, index) => (
+        <React.Fragment key={id}>
+         {/* 1. Add divider BEFORE the project, but NOT for the first one */}
+          {index !== 0 && (
+            <Divider className={styles.divider} my="sm" />
+          )}
 
-    {/* 2. The Project Item */}
-    <div
-      className={`${styles.textblue} ${styles.project}`}
-      onMouseEnter={() => setPreviewImage(img)}
-    >
-      <NavLink
-        className={styles.link}
-        label={name}
-        description={type}
-        href={href}
-        rightSection={<IconArrowUpRight size="1rem" stroke={1.5} />}
-      />
-    </div>
-  </React.Fragment>
-))}
+          {/* 2. The Project Item */}
+          <div
+            className={`${styles.textblue} ${styles.project}`}
+            onMouseEnter={() => setPreviewImage(img)}
+          >
+          <NavLink
+            className={styles.link}
+            label={name}
+            description={type}
+            href={href}
+            rightSection={<IconArrowUpRight size="1rem" stroke={1.5} />}
+          />
+          </div>
+        </React.Fragment>
+      ))}
       </div>
     </div>
   );
