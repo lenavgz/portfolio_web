@@ -114,7 +114,7 @@ export default function DashboardComponent() {
           />
         </div>
       )}
-
+      <Divider className={styles.divider} my="sm" />
       {/* Project Links */}
       <div
         className={styles.container}
@@ -143,6 +143,7 @@ export default function DashboardComponent() {
           </div>
         </React.Fragment>
       ))}
+      <Divider className={styles.divider} my="sm" />
       </div>
     </div>
   );
