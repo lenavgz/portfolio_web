@@ -7,14 +7,27 @@ import { Button, Center, Group, Text } from "@mantine/core";
 import { usePathname, useRouter } from "next/navigation";
 
 export default function NavComponent() {
-  const router = useRouter();
+  
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Group className={styles.navigation}>
-      <Button onClick={() => router.push("/")}>HOME</Button>
+      <Button onClick={() => scrollToSection("home")}>
+        HOME
+      </Button>
 
-      <Button onClick={() => router.push("/dashboard")}>PROJECTS</Button>
+      <Button  onClick={() => scrollToSection("projects")}>
+        PROJECTS
+      </Button>
 
-      <Button onClick={() => router.push("/contact")}>CONTACT</Button>
+      <Button onClick={() => scrollToSection("about")}>
+        ABOUT
+      </Button>
     </Group>
   );
 }
