@@ -29,7 +29,7 @@ export default function AboutComponent() {
               
               <Anchor
                 className={styles.email}
-                href="https://www.linkedin.com/in/YOUR-PROFILE" 
+                href="https://www.linkedin.com/in/lenavogentanz/" 
                 target="_blank"
                 underline="hover"
               >
