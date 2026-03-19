@@ -1,0 +1,150 @@
+"use client";
+
+import React, { useState } from "react";
+import styles from "./../page.module.css";
+import { Divider, NavLink } from "@mantine/core";
+import { IconArrowUpRight } from "@tabler/icons-react";
+import Image, { StaticImageData } from "next/image";
+
+// Importing images
+import bild_1 from "./../../assets/1.png";
+import bild_2 from "./../../assets/2.png";
+import bild_3 from "./../../assets/3.png";
+import bild_4 from "./../../assets/4.png";
+import bild_5 from "./../../assets/5.png";
+import bild_6 from "./../../assets/preview_auge.png";
+import bild_7 from "../../public/assets/skizzenbuch/1.png";
+
+
+
+export default function DashboardmasterComponent() {
+  // Store preview image state
+  const [previewImage, setPreviewImage] = useState<StaticImageData | null>(
+    null,
+  );
+
+  // Store mouse position
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  // Image mapping
+  const imageMap: Record<number, StaticImageData> = {
+    1: bild_1,
+    2: bild_2,
+    3: bild_3,
+    4: bild_4,
+    5: bild_5,
+  };
+
+  // Define project data with custom names
+  const projects = [
+    {
+      id: 1,
+      name: "FALSCHE WAHRHEITEN",
+      type: "UX/UI Design",
+      href: "./../projects/project_5",
+      img: bild_2,
+    },
+    {
+      id: 2,
+      name: "LONIS WELTRAUMREISE",
+      type: "UX/UI Design",
+      href: "./../projects/project_4",
+      img: bild_4,
+    },
+    {
+      id: 3,
+      name: "DAS AUGE ISST MIT",
+      type: "UX/UI Design",
+      href: "./../projects/project_6",
+      img: bild_6,
+    },
+    {
+      id: 4,
+      name: "HIDDEN HEROES",
+      type: "UX/UI Design",
+      href: "./../projects/project_2",
+      img: bild_3,
+    },
+    { id: 5, name: "SPACE 3D",type: "3D Animation", href: "./../projects/project_1", img: bild_1 },
+    {
+      id: 6,
+      name: "KINO TEASER",
+      type: "2D Animation",
+      href: "./../projects/project_3",
+      img: bild_5,
+    },
+    {
+      id: 7,
+      name: "SKIZZENBUCH",
+      type: "Sketches",
+      href: "./../projects/project_7",
+      img: bild_7,
+    },
+  ];
+
+  // Handle mouse move inside projects div
+  const handleMouseMove = (e: React.MouseEvent) => {
+    setMousePos({
+      x: e.clientX + 10, // Slight offset
+      y: e.clientY - 100,
+    });
+  };
+
+  return (
+    <div>
+      <h1 className={styles.textblue}>Projects</h1>
+
+      {/* Image Preview Box (Follows Mouse) */}
+      {previewImage && (
+        <div
+          className={styles.preview}
+          style={{
+            transform: previewImage ? "scale(1)" : "scale(0)",
+            position: "absolute",
+            top: `${mousePos.y}px`,
+            left: `${mousePos.x}px`,
+            pointerEvents: "none", // Prevents interfering with other elements
+          }}
+        >
+          <Image
+            src={previewImage}
+            alt="Preview"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      )}
+      <Divider className={styles.divider} my="sm" />
+      {/* Project Links */}
+      <div
+        className={styles.container}
+        onMouseMove={handleMouseMove} // Track mouse movement
+        onMouseLeave={() => setPreviewImage(null)} // Hide on mouse leave
+      >
+      {projects.map(({ id, name, type, href, img }, index) => (
+        <React.Fragment key={id}>
+         {/* 1. Add divider BEFORE the project, but NOT for the first one */}
+          {index !== 0 && (
+            <Divider className={styles.divider} my="sm" />
+          )}
+
+          {/* 2. The Project Item */}
+          <div
+            className={`${styles.textblue} ${styles.project}`}
+            onMouseEnter={() => setPreviewImage(img)}
+          >
+          <NavLink
+            className={styles.link}
+            label={name}
+            description={type}
+            href={href}
+            rightSection={<IconArrowUpRight size="1rem" stroke={1.5} />}
+          />
+          </div>
+        </React.Fragment>
+      ))}
+      <Divider className={styles.divider} my="sm" />
+      </div>
+    </div>
+  );
+}
